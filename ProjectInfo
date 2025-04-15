@@ -1,0 +1,58 @@
+===========================================================
+        Car Rental Management System (CRMS) – Overview
+===========================================================
+
+This Java-based Car Rental Management System (CRMS) is built 
+using object-oriented programming principles such as abstraction, 
+inheritance, interfaces, and exception handling. Below is a 
+component-wise breakdown of the system:
+
+-----------------------------------------------------------
+1. Rentable.class
+-----------------------------------------------------------
+An interface that defines the structure for all rentable items.
+Methods typically include:
+    - rent()
+    - returnItem()
+
+-----------------------------------------------------------
+2. RentalException.class
+-----------------------------------------------------------
+A custom exception class that handles rental-specific errors,
+such as:
+    - Renting a car that's already rented
+    - Returning a car that hasn't been rented
+
+-----------------------------------------------------------
+3. RentalItem.class
+-----------------------------------------------------------
+An abstract base class implementing Rentable. Serves as a parent 
+to all vehicle types. Provides shared properties and behaviors 
+for:
+    - Sedan
+    - SUV
+    - Truck
+
+-----------------------------------------------------------
+4. RentalManager.class
+-----------------------------------------------------------
+Handles all rental operations and manages the inventory of 
+vehicles. Typical responsibilities include:
+    - Listing available vehicles
+    - Renting out vehicles
+    - Processing returns
+
+-----------------------------------------------------------
+5. Sedan.class, SUV.class, Truck.class
+-----------------------------------------------------------
+Concrete subclasses of RentalItem. Each represents a specific 
+vehicle type with potentially different rules and rental rates.
+
+-----------------------------------------------------------
+6. CRMS.class
+-----------------------------------------------------------
+The main driver class of the application.
+Contains the main() method and connects user input/output 
+with the system's logic via RentalManager.
+
+===========================================================
